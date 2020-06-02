@@ -1,0 +1,42 @@
+.avatar-section{
+  padding-bottom: 30px;
+  &__title-block{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 40px 0;
+  }
+  &__name-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 57px;
+    color: #070707;
+    max-width: 280px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  &__profile-info{
+    max-width: 226px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #070707;
+    margin: 0;
+    padding-bottom: 9px;
+    box-sizing: border-box;
+  }
+  &__photo-wrapper{
+    position: relative;
+    max-width: 1000px;
+    padding-bottom: 100%;
+    overflow: hidden;
+  }
+  &__photo-wrapper img{
+    position: absolute;
+    width: 100%;
+  }
+}

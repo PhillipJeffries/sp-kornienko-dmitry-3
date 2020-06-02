@@ -1,0 +1,59 @@
+.about-me-section{
+  background-color: #F6F6F6;
+}
+
+
+.frame-container{
+  margin: 0 auto;
+  max-width: 578px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frame-wrapper{
+  position: relative;
+  max-width: 478px;
+  margin-bottom: 20px;
+}
+
+
+.frame-wrapper:nth-child(2n){
+  align-self: flex-start;
+}
+
+.frame-wrapper:nth-child(2n+1){
+  align-self: flex-end;
+}
+
+
+.frame-text{
+  max-width: 100%;
+  padding: 15px;
+  border: 2.5px solid #070707;
+}
+
+.squere{
+  position: absolute;
+  bottom: 3px;
+  right: 5%;
+  //z-index: -1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+.squere_1{
+  position: absolute;
+  bottom: 6px;
+  right: 5%;
+  //right: 0;
+  //z-index: 100;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #F6F6F6;
+  transform: rotate(45deg);
+}
