@@ -1,0 +1,95 @@
+// Подключение компонентов
+
+
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i|Montserrat:700|Open+Sans:400,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700&display=swap); 
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../static/fonts/Gilroy-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../static/fonts/Gilroy-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body{
+
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #070707;
+}
+
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+
+.section-title{
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 41px;
+  text-align: center;
+  color: #070707;
+}
+
+.form-style{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border: 2.5px solid #070707;
+  background-color: #ffffff;
+}
+
+.text-input{
+  font-size: 18px;
+  line-height: 21px;
+  padding: 14px;
+  border: 2.5px solid #E5E5E5;
+  min-width: 0;
+  margin-bottom: 20px;
+}
+
+.hidden{
+  display: none;
+}
+
+
+
+@import "./header/header";
+@import "./avatar-section/avatar-section";
+@import "./change-photo-menu/change-photo-menu";
+@import "./about-me-section/about-me";
+@import "./footer/footer";
+@import "./button_black/button_black";
+@import "./button_white/button_white";
+@import "./link_radial-border/link_radial";
+@import "./skills-section/skills";
+@import "./sign-modal/sign-modal"
+
+
+
+
+
+
+
+
+
