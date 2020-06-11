@@ -1,12 +1,17 @@
 <div class="form-wrapper hidden">
-  <form action="" class="form-style">
-    <label for="email">Email
-      <input type="text" id="email" class="text-input">
+  <form action="" class="form-style form-style_sign">
+    <label for="email" class="text-label label_star">Email
     </label>
-    <label for="email">Email
-      <input type="text" id="email" class="text-input">
+    <input type="email" id="email" class="text-input">
+    <label for="password" class="text-label label_star">Password
     </label>
-    @@include('button_white/index.html')
+    <input type="password" id="password" class="text-input">
+    @@include('button_white/index.html',{
+      "text":"Log in"
+    })
+    <div class="cross-wrapper">
+      @@include('button_close/index.html')
+    </div>
   </form>
 
 </div>
