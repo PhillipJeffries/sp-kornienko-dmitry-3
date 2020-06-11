@@ -49,6 +49,8 @@ body{
   color: #070707;
 }
 
+//form
+
 .form-style{
   position: absolute;
   left: 50%;
@@ -64,8 +66,29 @@ body{
   line-height: 21px;
   padding: 14px;
   border: 2.5px solid #E5E5E5;
+  width: 100%;
   min-width: 0;
   margin-bottom: 20px;
+}
+
+.text-label{
+  display: block;
+  padding-bottom: 6px;
+}
+
+.label_star::after{
+  content: " *";
+  color: #eb3617;
+}
+
+.cross-wrapper{
+  position: absolute;
+  top: 0;
+  right: -35px;
+}
+
+.form-button{
+  margin-top: 10px;
 }
 
 .hidden{
@@ -81,9 +104,11 @@ body{
 @import "./footer/footer";
 @import "./button_black/button_black";
 @import "./button_white/button_white";
+@import "./button_close/button_close";
 @import "./link_radial-border/link_radial";
 @import "./skills-section/skills";
-@import "./sign-modal/sign-modal"
+@import "./sign-modal/sign-modal";
+@import "./register-modal/register-modal"
 
 
 

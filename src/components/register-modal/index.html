@@ -1,6 +1,42 @@
 <div class="form-wrapper register-form-wrapper">
   <form action="" class="form-style form-style_register">
-    
+    <label for="registerEmail" class="text-label label_star">Email</label>
+    <input type="email" id="registerEmail"  class="text-input">
+    <div class="double-input-wrapper">
+      <div class="input-wrapper">
+        <label for="registerName" class="text-label label_star">Name</label>
+        <input type="text" id="registerName"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="registerSurname" class="text-label label_star">Surname</label>
+        <input type="email" id="registerSurname"  class="text-input">
+      </div>
+    </div>
+    <div class="double-input-wrapper">
+      <div class="input-wrapper">
+        <label for="registerPassword" class="text-label label_star">Password</label>
+        <input type="password" id="registerPassword"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="repeatRegisterPassword" class="text-label label_star">Repeat password</label>
+        <input type="password" id="repeatRegisterPassword"  class="text-input">
+      </div>
+    </div>
+    <div class="double-input-wrapper">
+      <div class="input-wrapper">
+        <label for="registerLocation" class="text-label label_star">Location</label>
+        <input type="text" id="registerLocation"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="registerAge" class="text-label label_star">Age</label>
+        <input type="text" id="registerAge"  class="text-input">
+      </div>
+    </div>
+    <div class="sign-up-button">
+      @@include('button_white/index.html',{
+        "text":"Sign up"
+      })
+    </div>
     <div class="cross-wrapper">
       @@include('button_close/index.html')
     </div>
