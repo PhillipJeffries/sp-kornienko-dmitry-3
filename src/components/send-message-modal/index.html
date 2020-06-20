@@ -1,0 +1,36 @@
+<div class="form-wrapper register-form-wrapper hidden">
+  <form name="sendMessage" action="" class="form-style form-style_register">
+    <div class="grid-input-block">
+      <div class="input-wrapper">
+        <label for="messageName" class="text-label label_star">What is your name?</label>
+        <input type="text" id="messageName"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="messageSubject" class="text-label label_star">Message subject</label>
+        <input type="text" id="messageSubject"  class="text-input">
+      </div>
+      
+      <div class="input-wrapper">
+        <label for="messageEmail" class="text-label label_star">Your Email</label>
+        <input type="email" id="messageEmail"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="messageMobile" class="text-label label_star">Your mobile phone</label>
+        <input type="password" id="messageMobile"  class="text-input">
+      </div>
+    </div>
+      
+    <label for="sendMessageText" class="text-label">What do you want to discuss with me?</label>
+    <textarea class="text-input" name="" id="sendMessageText" cols="30" rows="5"></textarea>
+    @@include('checkbox_custom/index.html',{
+      "label":"Clicking on the button, you consent to the processing of your personal data."
+    })
+    @@include('button_white/index.html',{
+      "class":"form-button",
+      "text":"Send"
+    })
+    <div class="cross-wrapper">
+      @@include('button_close/index.html')
+    </div>
+  </form>
+</div>

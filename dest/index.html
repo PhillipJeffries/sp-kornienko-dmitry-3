@@ -9,28 +9,28 @@
   <link rel="stylesheet" href="/static/fonts/oswald.css" />
   <link href="/common.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/static/images/favicon.ico">
-  <title>main</title>
+  <title>Home</title>
 </head>
 
 <body>
   <div class="container">
     <header class="header">
-  <a href="#" class="header__link">Home</a>
+  <a href="index.html" class="header__link header__link_active">Home</a>
   <ul class="header__menu">
     <li class="header__menu-item">
-      <a href="#" class="header__link">My blog</a>
+      <a href="/pages/myBlog/index.html" class="header__link @@class2">My blog</a>
     </li>
     <li class="header__menu-item">
-      <a href="#" class="header__link">Sign in</a>
+      <a href="#" class="header__link @@class3 header__link_sign">Sign in</a>
     </li>
     <li class="header__menu-item">
-      <a href="#" class="header__link">Register</a>
+      <a href="#" class="header__link @@class4 header__link_register">Register</a>
     </li>
   </ul>
 </header>
     <section class="avatar-section">
   <div class="avatar-section__title-block">
-    <h1 class="avatar-section__name-title">
+    <h1 class="avatar-section__name-title page-title">
       Dmitriy Kornienko
     </h1>
     <p class="avatar-section__profile-info">
@@ -212,6 +212,27 @@
     </li>
   </ul>
 </section>
+    <section class="portfolio-section">
+  <div class="container">
+    <h1 class="section-title">
+      Portfolio
+    </h1>
+    <div class="portfolio-section__slider">
+      <button class="portfolio-section__arrow_left"></button>
+      <button class="portfolio-section__arrow_right"></button>
+      <div class="portfolio-section__slider-info">
+        <a href="#" class="portfolio-section__link_dl">
+          <h2 class="portfolio-section__slider-info-title">
+            Learning site for DL Academy courses
+          </h2>
+        </a>
+            <p class="portfolio-section__slider-info-text">
+              A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.
+            </p>
+      </div>
+    </div>
+  </div>
+</section>
     <footer class="footer">
   <h2 class="section-title">
     Contacts
@@ -260,71 +281,107 @@
   <span>Program code from Dmitriy</span>
 </p>
 </footer>
-    <div class="form-wrapper hidden">
-  <form action="" class="form-style form-style_sign">
+    <div class="form-wrapper sign-form-wrapper hidden">
+  <form name="sign" action="" class="form-style form_sign">
     <label for="email" class="text-label label_star">Email
     </label>
     <input type="email" id="email" class="text-input">
     <label for="password" class="text-label label_star">Password
     </label>
     <input type="password" id="password" class="text-input">
-    <button class="button_white form-button">
+    <button type="@@type" class="button_white form-button">
   Log in
 </button>
     <div class="cross-wrapper">
-      <button class="button_close @@class">
+      <button class="button_close signModalClose">
 </button>
     </div>
   </form>
 
 </div>
-    <div class="form-wrapper register-form-wrapper">
-  <form action="" class="form-style form-style_register">
-    <label for="registerEmail" class="text-label label_star">Email</label>
-    <input type="email" id="registerEmail"  class="text-input">
-    <div class="double-input-wrapper">
+    <div class="form-wrapper register-form-wrapper hidden">
+  <form name="register" action="" class="form-style form_register">
+    <label for="emailRegister" class="text-label label_star">Email</label>
+    <input type="email" id="emailRegister" class="text-input">
+    <div class="grid-input-block">
       <div class="input-wrapper">
-        <label for="registerName" class="text-label label_star">Name</label>
-        <input type="text" id="registerName"  class="text-input">
+        <label for="nameRegister" class="text-label label_star">Name</label>
+        <input type="text" id="nameRegister" class="text-input ">
       </div>
       <div class="input-wrapper">
-        <label for="registerSurname" class="text-label label_star">Surname</label>
-        <input type="email" id="registerSurname"  class="text-input">
+        <label for="surnameRegister" class="text-label label_star">Surname</label>
+        <input type="text" id="surnameRegister" class="text-input ">
       </div>
+      <div class="input-wrapper">
+        <label for="passwordRegister" class="text-label label_star">Password</label>
+        <input type="password" id="passwordRegister" class="text-input ">
+      </div>
+      <div class="input-wrapper">
+        <label for="passwordRepeatRegister" class="text-label label_star">Repeat password</label>
+        <input type="password" id="passwordRepeatRegister" class="text-input ">
+      </div>
+      <div class="input-wrapper">
+        <label for="locationRegister" class="text-label label_star">Location</label>
+        <input type="text" id="locationRegister" class="text-input ">
+      </div>
+      <div class="input-wrapper">
+        <label for="ageRegister" class="text-label label_star">Age</label>
+        <input type="text" id="ageRegister" class="text-input ">
+      </div>
+      
     </div>
-    <div class="double-input-wrapper">
-      <div class="input-wrapper">
-        <label for="registerPassword" class="text-label label_star">Password</label>
-        <input type="password" id="registerPassword"  class="text-input">
-      </div>
-      <div class="input-wrapper">
-        <label for="repeatRegisterPassword" class="text-label label_star">Repeat password</label>
-        <input type="password" id="repeatRegisterPassword"  class="text-input">
-      </div>
-    </div>
-    <div class="double-input-wrapper">
-      <div class="input-wrapper">
-        <label for="registerLocation" class="text-label label_star">Location</label>
-        <input type="text" id="registerLocation"  class="text-input">
-      </div>
-      <div class="input-wrapper">
-        <label for="registerAge" class="text-label label_star">Age</label>
-        <input type="text" id="registerAge"  class="text-input">
-      </div>
-    </div>
-<<<<<<< HEAD
-    <label>
-    <input type="checkbox">
-    Clicking on the button, you consent to the processing of your personal data.
-</label>
-    <div class="form-button">
-=======
-    <div class="sign-up-button">
->>>>>>> 278b3afe35d230f7b009b93f8ca904eaca3221fe
-      <button class="button_white form-button">
+    <div class="checkbox-wrapper">
+  <input type="checkbox" class="checkbox-wrapper__oldstyle" name="@@name" id="@@id"> 
+  <span class="checkbox-wrapper__newstyle @@class"></span>
+
+  <label for="@@id" class="checkbox-wrapper__label @@class">
+    Clicking on the button, you consent to the processing of your personal data. 
+  </label>
+</div>
+    <button type="@@type" class="button_white form-button">
   Sign up
 </button>
+    <div class="cross-wrapper">
+      <button class="button_close registerModalClose">
+</button>
     </div>
+  </form>
+</div>
+    <div class="form-wrapper register-form-wrapper hidden">
+  <form name="sendMessage" action="" class="form-style form-style_register">
+    <div class="grid-input-block">
+      <div class="input-wrapper">
+        <label for="messageName" class="text-label label_star">What is your name?</label>
+        <input type="text" id="messageName"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="messageSubject" class="text-label label_star">Message subject</label>
+        <input type="text" id="messageSubject"  class="text-input">
+      </div>
+      
+      <div class="input-wrapper">
+        <label for="messageEmail" class="text-label label_star">Your Email</label>
+        <input type="email" id="messageEmail"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="messageMobile" class="text-label label_star">Your mobile phone</label>
+        <input type="password" id="messageMobile"  class="text-input">
+      </div>
+    </div>
+      
+    <label for="sendMessageText" class="text-label">What do you want to discuss with me?</label>
+    <textarea class="text-input" name="" id="sendMessageText" cols="30" rows="5"></textarea>
+    <div class="checkbox-wrapper">
+  <input type="checkbox" class="checkbox-wrapper__oldstyle" name="@@name" id="@@id"> 
+  <span class="checkbox-wrapper__newstyle @@class"></span>
+
+  <label for="@@id" class="checkbox-wrapper__label @@class">
+    Clicking on the button, you consent to the processing of your personal data. 
+  </label>
+</div>
+    <button type="@@type" class="button_white form-button">
+  Send
+</button>
     <div class="cross-wrapper">
       <button class="button_close @@class">
 </button>

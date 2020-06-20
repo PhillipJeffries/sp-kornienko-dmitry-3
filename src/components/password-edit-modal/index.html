@@ -1,0 +1,23 @@
+<div class="form-wrapper changePasswordModal hidden">
+  <form name="editPassword" action="" class="form-style form-style_password-edit">
+    <label for="oldPassword" class="text-label label_star">Old password
+    </label>
+    <input type="password" id="oldPassword" class="text-input">
+    <label for="newPassword" class="text-label label_star">New password
+    </label>
+    <input type="password" id="newPassword" class="text-input">
+    <label for="repeatNewPassword" class="text-label label_star">Repeat New password
+    </label>
+    <input type="password" id="repeatNewPassword" class="text-input">
+    @@include('button_white/index.html',{
+      "class":"form-button",
+      "text":"Change password"
+    })
+    <div class="cross-wrapper">
+      @@include('button_close/index.html',{
+      "class":"changePasswordModalClose"
+      })
+    </div>
+  </form>
+
+</div>

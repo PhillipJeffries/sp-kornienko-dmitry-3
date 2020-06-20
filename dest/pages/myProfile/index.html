@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="/static/fonts/oswald.css" />
+  <link href="/common.css" rel="stylesheet" />
+ 
+  <title>My profile</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+  <a href="/../" class="header__link @@class1">Home</a>
+  <ul class="header__menu">
+    <li class="header__menu-item">
+      <a href="#" class="header__link @@class2"></a>
+    </li>
+    <li class="header__menu-item">
+      <a href="/pages/myBlog/index.html" class="header__link @@class3 header__link_sign">My blog</a>
+    </li>
+    <li class="header__menu-item">
+      <a href="#" class="header__link header__link_active header__link_register">My profile</a>
+    </li>
+  </ul>
+</header>
+    <section class="profile-section">
+  <h1 class="profile-section__title page-title">
+    My profile
+  </h1>
+  <div class="profile-section__wrapper">
+    <div class="profile-section__avatar-wrapper">
+      <picture class="profile-section__avatar">
+        <img src="" alt="">
+      </picture>
+    </div>
+    <div class="profile-section__info">
+      <ul class="profile-section__info-list">
+        <li class="profile-section__info-item">
+          Name:
+          <span class="profile-section__info-item_var">
+            Dmitriy
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Surname:
+          <span class="profile-section__info-item_var">
+            Kornienko
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Email:
+          <span class="profile-section__info-item_var">
+           ggbox@mail.ru
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Password:
+          <span class="profile-section__info-item_var">
+            ********
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Location:
+          <span class="profile-section__info-item_var">
+            Togliatti
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Age:
+          <span class="profile-section__info-item_var">
+            31
+          </span>
+        </li>
+      </ul>
+      <ul class="profile-section__button-list">
+        <li class="profile-section__button-item">
+          <button type="@@type" class="button_white changePasswordButton">
+  Change password
+</button>
+        </li>
+        <li class="profile-section__button-item">
+          <button type="@@type" class="button_white changeDataButton">
+  Change other data
+</button>
+        </li>
+        <li class="profile-section__button-item">
+          <button type="@@type" class="button_white deleteAccountButton">
+  Delete account
+</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+  </div>
+  <div class="form-wrapper changePasswordModal hidden">
+  <form name="editPassword" action="" class="form-style form-style_password-edit">
+    <label for="oldPassword" class="text-label label_star">Old password
+    </label>
+    <input type="password" id="oldPassword" class="text-input">
+    <label for="newPassword" class="text-label label_star">New password
+    </label>
+    <input type="password" id="newPassword" class="text-input">
+    <label for="repeatNewPassword" class="text-label label_star">Repeat New password
+    </label>
+    <input type="password" id="repeatNewPassword" class="text-input">
+    <button type="@@type" class="button_white form-button">
+  Change password
+</button>
+    <div class="cross-wrapper">
+      <button class="button_close changePasswordModalClose">
+</button>
+    </div>
+  </form>
+
+</div>
+  <div class="form-wrapper changeDataModal hidden">
+  <form name="dataEdit" action="" class="form-style form-style_data-edit">
+    <label for="editEmail" class="text-label">Email</label>
+    <input type="email" id="editEmail"  class="text-input">
+    <div class="grid-input-block">
+      <div class="input-wrapper">
+        <label for="editName" class="text-label">Name</label>
+        <input type="text" id="editName"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="editSurname" class="text-label">Surname</label>
+        <input type="text" id="editSurname"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="editLocation" class="text-label">Location</label>
+        <input type="text" id="editLocation"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="editAge" class="text-label">Age</label>
+        <input type="text" id="editAge"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="editProfilePicture" class="text-label">Profile picture</label>
+      <input type="" id="editProfilePicture"  class="text-input text-input_half">
+      </div>
+      
+    </div>
+    
+    <button type="@@type" class="button_white form-button">
+  Submit changes
+</button>
+    <div class="cross-wrapper">
+      <button class="button_close changeDataModalClose">
+</button>
+    </div>
+  </form>
+</div>
+  <script src="/../pages/myProfile/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<section class="profile-section">
+  <h1 class="profile-section__title page-title">
+    My profile
+  </h1>
+  <div class="profile-section__wrapper">
+    <div class="profile-section__avatar-wrapper">
+      <picture class="profile-section__avatar">
+        <img src="" alt="">
+      </picture>
+    </div>
+    <div class="profile-section__info">
+      <ul class="profile-section__info-list">
+        <li class="profile-section__info-item">
+          Name:
+          <span class="profile-section__info-item_var">
+            Dmitriy
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Surname:
+          <span class="profile-section__info-item_var">
+            Kornienko
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Email:
+          <span class="profile-section__info-item_var">
+           ggbox@mail.ru
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Password:
+          <span class="profile-section__info-item_var">
+            ********
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Location:
+          <span class="profile-section__info-item_var">
+            Togliatti
+          </span>
+        </li>
+        <li class="profile-section__info-item">
+          Age:
+          <span class="profile-section__info-item_var">
+            31
+          </span>
+        </li>
+      </ul>
+      <ul class="profile-section__button-list">
+        <li class="profile-section__button-item">
+          @@include('button_white/index.html',{
+            "class":"changePasswordButton",
+            "text":"Change password"
+          })
+        </li>
+        <li class="profile-section__button-item">
+          @@include('button_white/index.html',{
+            "class":"changeDataButton",
+            "text":"Change other data"
+          })
+        </li>
+        <li class="profile-section__button-item">
+          @@include('button_white/index.html',{
+            "class":"deleteAccountButton",
+            "text":"Delete account"
+          })
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -9,31 +9,24 @@
   <link rel="stylesheet" href="/static/fonts/oswald.css" />
   <link href="/common.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/static/images/favicon.ico">
-  <title>Home</title>
+  <title>Blog</title>
 </head>
 
 <body>
   <div class="container">
     @@include('header/index.html',{
-      "href1":"index.html",
+      "href1":"/../index.html",
       "link1":"Home",
-      "class1":"header__link_active",
-      "href2":"/pages/myBlog/index.html",
+      "href2":"#",
       "link2":"My blog",
-      "href3":"#",
-      "link3":"Sign in",
+      "class2":"header__link_active",
+      "href3":"/pages/myProfile/index.html",
+      "link3":"My profile",
       "href4":"#",
-      "link4":"Register"
+      "link4":""
     })
-    @@include('avatar-section/index.html')
-  </div>
-    @@include('about-me-section/index.html')
-    @@include('skills-section/index.html')
-    @@include('portfolio-section/index.html')
+
     @@include('footer/index.html')
-    @@include('sign-modal/index.html')
-    @@include('register-modal/index.html')
-    @@include('send-message-modal/index.html')
   <script src="index.js"></script>
 </body>
 
