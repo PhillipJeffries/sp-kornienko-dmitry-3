@@ -1,0 +1,39 @@
+<div class="form-wrapper changeDataModal hidden">
+  <form name="dataEdit" action="" class="form-style form-style_data-edit">
+    <label for="editEmail" class="text-label">Email</label>
+    <input type="email" id="editEmail"  class="text-input">
+    <div class="grid-input-block">
+      <div class="input-wrapper">
+        <label for="editName" class="text-label">Name</label>
+        <input type="text" id="editName"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="editSurname" class="text-label">Surname</label>
+        <input type="text" id="editSurname"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="editLocation" class="text-label">Location</label>
+        <input type="text" id="editLocation"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="editAge" class="text-label">Age</label>
+        <input type="text" id="editAge"  class="text-input">
+      </div>
+      <div class="input-wrapper">
+        <label for="editProfilePicture" class="text-label">Profile picture</label>
+      <input type="" id="editProfilePicture"  class="text-input text-input_half">
+      </div>
+      
+    </div>
+    
+    @@include('button_white/index.html',{
+      "class":"form-button",
+      "text":"Submit changes"
+    })
+    <div class="cross-wrapper">
+      @@include('button_close/index.html',{
+        "class":"changeDataModalClose"
+      })
+    </div>
+  </form>
+</div>

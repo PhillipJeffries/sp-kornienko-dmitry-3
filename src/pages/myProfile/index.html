@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="/static/fonts/oswald.css" />
+  <link href="/common.css" rel="stylesheet" />
+ 
+  <title>My profile</title>
+</head>
+<body>
+  <div class="container">
+    @@include('header/index.html',{
+      "href1":"/../",
+      "link1":"Home",
+      "href2":"#",
+      "link2":"",
+      "href3":"/pages/myBlog/index.html",
+      "link3":"My blog",
+      "href4":"#",
+      "link4":"My profile",
+      "class4":"header__link_active"
+    })
+    @@include('profile-section/index.html')
+  </div>
+  @@include('password-edit-modal/index.html')
+  @@include('data-edit-modal/index.html')
+  <script src="/../pages/myProfile/index.js"></script>
+</body>
+</html>

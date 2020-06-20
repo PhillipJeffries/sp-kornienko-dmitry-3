@@ -1,45 +1,45 @@
-<div class="form-wrapper register-form-wrapper">
-  <form action="" class="form-style form-style_register">
-    <label for="registerEmail" class="text-label label_star">Email</label>
-    <input type="email" id="registerEmail"  class="text-input">
-    <div class="double-input-wrapper">
+<div class="form-wrapper register-form-wrapper hidden">
+  <form name="register" action="" class="form-style form_register">
+    <label for="emailRegister" class="text-label label_star">Email</label>
+    <input type="email" id="emailRegister" class="text-input">
+    <div class="grid-input-block">
       <div class="input-wrapper">
-        <label for="registerName" class="text-label label_star">Name</label>
-        <input type="text" id="registerName"  class="text-input">
+        <label for="nameRegister" class="text-label label_star">Name</label>
+        <input type="text" id="nameRegister" class="text-input ">
       </div>
       <div class="input-wrapper">
-        <label for="registerSurname" class="text-label label_star">Surname</label>
-        <input type="email" id="registerSurname"  class="text-input">
+        <label for="surnameRegister" class="text-label label_star">Surname</label>
+        <input type="text" id="surnameRegister" class="text-input ">
       </div>
+      <div class="input-wrapper">
+        <label for="passwordRegister" class="text-label label_star">Password</label>
+        <input type="password" id="passwordRegister" class="text-input ">
+      </div>
+      <div class="input-wrapper">
+        <label for="passwordRepeatRegister" class="text-label label_star">Repeat password</label>
+        <input type="password" id="passwordRepeatRegister" class="text-input ">
+      </div>
+      <div class="input-wrapper">
+        <label for="locationRegister" class="text-label label_star">Location</label>
+        <input type="text" id="locationRegister" class="text-input ">
+      </div>
+      <div class="input-wrapper">
+        <label for="ageRegister" class="text-label label_star">Age</label>
+        <input type="text" id="ageRegister" class="text-input ">
+      </div>
+      
     </div>
-    <div class="double-input-wrapper">
-      <div class="input-wrapper">
-        <label for="registerPassword" class="text-label label_star">Password</label>
-        <input type="password" id="registerPassword"  class="text-input">
-      </div>
-      <div class="input-wrapper">
-        <label for="repeatRegisterPassword" class="text-label label_star">Repeat password</label>
-        <input type="password" id="repeatRegisterPassword"  class="text-input">
-      </div>
-    </div>
-    <div class="double-input-wrapper">
-      <div class="input-wrapper">
-        <label for="registerLocation" class="text-label label_star">Location</label>
-        <input type="text" id="registerLocation"  class="text-input">
-      </div>
-      <div class="input-wrapper">
-        <label for="registerAge" class="text-label label_star">Age</label>
-        <input type="text" id="registerAge"  class="text-input">
-      </div>
-    </div>
-    <div class="sign-up-button">
-      @@include('button_white/index.html',{
-        "class":"form-button",
-        "text":"Sign up"
-      })
-    </div>
+    @@include('checkbox_custom/index.html',{
+      "label":"Clicking on the button, you consent to the processing of your personal data."
+    })
+    @@include('button_white/index.html',{
+      "class":"form-button",
+      "text":"Sign up"
+    })
     <div class="cross-wrapper">
-      @@include('button_close/index.html')
+      @@include('button_close/index.html',{
+        "class":"registerModalClose"
+      })
     </div>
   </form>
 </div>

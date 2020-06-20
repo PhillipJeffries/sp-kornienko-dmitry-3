@@ -1,0 +1,35 @@
+.form-style_register{
+  width: 60%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.grid-input-block{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+}
+
+.input-wrapper:nth-child(1){
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.double-input-wrapper{
+  display: flex;
+  width: 100%;
+}
+
+.double-input-wrapper div:nth-child(1){
+  margin-right: 20px;
+}
+
+.form-style_register textarea{
+  resize: none;
+}
