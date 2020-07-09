@@ -43,8 +43,40 @@ setTimeout(function(){clearInterval(growSoft)}, 9000)
 
 //PAGINATION----------------  video 6 1:45
 
+//server--------------------
 
+const SERVER_URL = 'https://academy.directlinedev.com';
 
+function call(method, path, fn) {
+  let xhr = new XMLHttpRequest();
+  xhr.open(method, SERVER_URL + path);
+  xhr.send();
+  xhr.onload = function () {
+    fn(xhr);
+  }
+}
+
+function createTag(tag) {
+  return `
+  <input type="checkbox" name="tags" value="1" class="filter-checkbox">
+  `
+}
+
+let tagsBox = document.querySelector('.filter-tags');
+
+call('GET', '/api/tags', function(res) {
+  let response = JSON.parse(res.response);
+  if(response.success) {
+    const tags = response.data;
+    for(let i=0; i < tags.length; i++) {
+      let tagHtml = createTag(tags[i]);
+      tagsBox.insertAdjacentHTML('beforeend', tagHtml)
+    }
+    console.log(tags);
+  } else {
+      alert('fuckYou!');
+  }
+})
 
 
 
