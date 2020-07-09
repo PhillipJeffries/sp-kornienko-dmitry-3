@@ -36,20 +36,7 @@ let growSoft = setInterval(function(){
 setTimeout(function(){clearInterval(growSoft)}, 9000)
 */
 
-
-
-
-
-
-//PAGINATION----------------  video 6 1:45
-
-
-
-
-
-
-
-//show/hide  function------------
+//show/hide function
 
 function showModal(modal){
   modal.classList.remove('hidden')
@@ -60,7 +47,7 @@ modal.classList.add('hidden')
 } ;
 
 
-//get form values function---------------------
+//get form values function
 
 
 function getValuesForm(form) {
@@ -72,9 +59,6 @@ function getValuesForm(form) {
     const input = inputs[i];
     body[input.id] = input.value;
   }*/
-  /*
-  for (leti=0; i<inputs.length; i++)
-  */
   for(let input of inputs) {
     switch (input.type) {
       case 'radio':
@@ -101,124 +85,7 @@ function getValuesForm(form) {
 }
 
 
-//set form values function-------------------
-
-function setAllValuesForm(form, values){
-  const inputs = form.querySelectorAll('input');
-  const textareas = form.querySelectorAll('textarea');
-  for(let i=0; i< inputs.length; i ++){
-    let input = inputs[i];
-    switch (input.type){
-      case 'radio':
-        if(values[input.name] && values[input.name] === input.value){
-          input.checked = true;
-        }
-        break;
-      case 'checkbox':
-        if(values[input.name]){
-          if(typeof values[input.name] === 'object'){
-            for(let j=0; j< values[input.name].length; j++) {
-                let arr = values[input.name];
-                if(arr[j] === input.value) {
-                  input.checked = true; 
-                }
-            }
-          }else {
-            if(values[input.name] === input.value){
-                input.checked = true;
-            }
-          }
-        }
-        break;
-      default:
-          input.value = values[input.name];
-    }
-  }
-  for(let textarea of textareas) {
-    textarea.value = values[textarea.name];
-  }
-};
-  
-
-
-//get url values function------------------
-
-
-
-function getValuesUrl() {
-  
-  let params = {};
-  if(location.search) {
-    let paramsArr = location.search.substring(1).split('&'); //split('$') - &=','
-    for(let i=0; i < paramsArr.length; i++) {
-      let split = paramsArr[i].split('=');
-      let name = split[0];
-      let value = split[1];
-      if(params[name]) {
-        if(typeof params[name] === 'string') {
-          params[name] = [params[name], value];
-        } else {
-          params[name].push(value);
-        }
-      } else {
-          params[name] = value;
-    }
-    }
-  }
-  return params;
-};
-
-  console.log('urlValues', getValuesUrl());
-
-
-//SET VALUES TO URL----------------------
-
-function setValuesUrl(values) {
-  //Object.keys() - get all keys from object
-  let params = [];
-  let names = Object.keys(values);
-  for(let i=0; i<names.length; i++){
-    if(typeof values[names[i]] === 'string') {
-      params.push(names[i] + '=' + values[names[i]]);
-    } else {
-      for(let j=0; j<values[names[i]].length; j++) {
-        params.push(names[i]+'='+values[names[i]][j]);
-      }
-    }
-  }
-  //window.location.search = '?' + params.join('&'); //[].join('$') - ','=$
-  window.history.replaceState({}, document.title, '?' + params.join('&')); //without page reloading
-}
-
-
-
-
-//filter-form---------------------
-
-let filterForm = document.querySelector('.filterForm');
-
-
-
-
-//get values filter form---------------------
-filterForm.addEventListener('submit', function(event){
-  event.preventDefault();
-  console.log('filterSubmitPush', getValuesForm(event.target));
-  localStorage.setItem('filterForm', filterForm);
-  setValuesUrl(getValuesForm(event.target))
-})
-
-
-
-//set values filter form--------------
-setAllValuesForm(filterForm, localStorage.getItem('filterForm', filterForm))
-
-setAllValuesForm(filterForm, getValuesUrl());
-
-
-
-
-//SIGN modal show/hide--------------------
+//SIGN modal show/hide
 let signModal = document.querySelector('.sign-form-wrapper') ;
 
 let signLink = document.querySelector('.header__link_sign') ;
@@ -236,7 +103,7 @@ document.addEventListener('keydown', function (evt) {
 }); 
 
 
-//mailCheck--------------------
+//mailCheck
 
 function mailCheck(email) {
   return email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i) ;
@@ -246,7 +113,7 @@ function mailCheck(email) {
 
 
 
-//SIGN-FORM----------------------
+//SIGN-FORM
 
 let signForm = document.querySelector('.form_sign') ;
 console.log('signForm', signForm);
@@ -274,7 +141,7 @@ signForm.addEventListener('submit', function (event){
 
 
 
-//REGISTER modal show/hide------------------
+//REGISTER modal show/hide
 let registerModal = document.querySelector('.register-form-wrapper') ;
 
 let registerLink = document.querySelector('.header__link_register') ;
@@ -297,7 +164,7 @@ document.addEventListener('keydown', function (evt) {
 
 
 
-//REGISTER-FORM-------------------
+//REGISTER-FORM
 
 let registerForm = document.querySelector('.form_register') ;
 console.log('registerForm', registerForm) ;
@@ -323,8 +190,7 @@ registerForm.addEventListener('submit', function (event){
 
 
 
-
-//SLIDER--------------------------------
+//SLIDER
 
 const wrapper = document.querySelector('.portfolio-section__slider-wrapper'),
       slider = document.querySelector('.portfolio-section__slider'),
@@ -393,6 +259,12 @@ function setActiveSlide(index) {
 }
 
 
+
+nextSlideButton.addEventListener('click', function(){
+  const index = activeSlide + 1;
+  setActiveSlide(index);
+});
+
 previosSlideButton.addEventListener('click', function(){
   const index = activeSlide - 1;
   setActiveSlide(index);
@@ -400,22 +272,16 @@ previosSlideButton.addEventListener('click', function(){
 
 
 
-nextSlideButton.addEventListener('click', function(){
-  const index = activeSlide + 1;
-  setActiveSlide(index);
-});
 
 
-
-
-//BACKEND----------------
+//BACKEND
 
 if(localStorage.getItem('activeSlide')){
   setActiveSlide(localStorage.getItem('activeSlide'));
 };
 
 
-//date----------------------
+//date
 let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
     date = new Date();
 

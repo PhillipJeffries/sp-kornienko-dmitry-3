@@ -32,3 +32,12 @@ document.addEventListener('keydown', function (evt) {
   if(evt.keyCode === 27) {
       hideModal(changeDataModal)}
 }); 
+
+
+//FILTER-FORM
+
+
+
+const filterForm = document.querySelector('.filterForm');
+
+console.log('FILTER', filterForm);

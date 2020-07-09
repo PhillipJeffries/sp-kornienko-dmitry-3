@@ -28,6 +28,49 @@
     </li>
   </ul>
 </header>
+    <form name="filterForm" class="filterForm">
+  <div class="filter-tags">
+    <input type="checkbox" name="color" value="1" class="filter-checkbox">
+    <input type="checkbox" name="color" value="2" class="filter-checkbox">
+    <input type="checkbox" name="color" value="3" class="filter-checkbox">
+    <input type="checkbox" name="color" value="4" class="filter-checkbox">
+    <input type="checkbox" name="color" value="5" class="filter-checkbox">
+    <input type="checkbox" name="color" value="6" class="filter-checkbox">
+    <input type="checkbox" name="color" value="7" class="filter-checkbox">
+    <input type="checkbox" name="color" value="8" class="filter-checkbox">
+  </div>
+  <div class="filter-views">
+    <input type="radio" name="filterViews" value="1" id="">
+    <input type="radio" name="filterViews" value="2" id="">
+    <input type="radio" name="filterViews" value="3" id="">
+  </div>
+  <div class="filter-comments">
+    <input type="checkbox" name="filterComments" value="1">
+    <input type="checkbox" name="filterComments" value="2">
+    <input type="checkbox" name="filterComments" value="3">
+  </div>
+  <div class="filter-how-show">
+    <input type="radio" name="howShow" value="1">
+    <input type="radio" name="howShow" value="2">
+  </div>
+  <div class="filter-sort">
+    <input type="radio" name="filterSort" value="1">
+    <input type="radio" name="filterSort" value="2">
+    <input type="radio" name="filterSort" value="3">
+  </div>
+  <button type="submit">fuckYou</button>
+</form>
+    <div class="pagination">
+  <a href="" class="pagination__link">
+    1
+  </a>
+  <a href="" class="pagination__link">
+    2
+  </a>
+  <a href="" class="pagination__link">
+    3
+  </a>
+</div>
     <section class="avatar-section">
   <div class="avatar-section__title-block">
     <h1 class="avatar-section__name-title page-title">
@@ -214,12 +257,30 @@
 </section>
     <section class="portfolio-section">
   <div class="container">
-    <h1 class="section-title">
+    <h1 class="portfolio-section__title section-title">
       Portfolio
     </h1>
-    <div class="portfolio-section__slider">
-      <button class="portfolio-section__arrow_left"></button>
-      <button class="portfolio-section__arrow_right"></button>
+    <div class="portfolio-section__slider-wrapper">
+      <div class="portfolio-section__slider">
+        <div class="portfolio-section__slide">
+          <img src="/../static/images/slider-pic.png" alt="">
+        </div>
+        <div class="portfolio-section__slide">
+          <img src="/../static/images/slider-pic.png" alt="">
+        </div>
+        <div class="portfolio-section__slide">
+          <img src="/../static/images/slider-pic.png" alt="">
+        </div>
+        <div class="portfolio-section__slide">
+          <img src="/../static/images/slider-pic.png" alt="">
+        </div>
+      </div>
+      <div class="portfolio-section__button-wrapper">
+        <button class="portfolio-section__button portfolio-section__arrow_left"></button>
+        <button class="portfolio-section__button portfolio-section__arrow_right"></button>
+      </div>
+      <div class="portfolio-section__pagination">
+      </div>
       <div class="portfolio-section__slider-info">
         <a href="#" class="portfolio-section__link_dl">
           <h2 class="portfolio-section__slider-info-title">
@@ -233,6 +294,8 @@
     </div>
   </div>
 </section>
+
+
     <footer class="footer">
   <h2 class="section-title">
     Contacts
@@ -285,10 +348,10 @@
   <form name="sign" action="" class="form-style form_sign">
     <label for="email" class="text-label label_star">Email
     </label>
-    <input type="email" id="email" class="text-input">
+    <input type="email" id="emailSign" class="text-input">
     <label for="password" class="text-label label_star">Password
     </label>
-    <input type="password" id="password" class="text-input">
+    <input type="password" id="passwordSign" class="text-input">
     <button type="@@type" class="button_white form-button">
   Log in
 </button>
@@ -300,33 +363,33 @@
 
 </div>
     <div class="form-wrapper register-form-wrapper hidden">
-  <form name="register" action="" class="form-style form_register">
+  <form name="register" method="POST" action="" class="form-style form_register">
     <label for="emailRegister" class="text-label label_star">Email</label>
-    <input type="email" id="emailRegister" class="text-input">
+    <input type="text" name="emailRegister" id="emailRegister" class="text-input email_reg">
     <div class="grid-input-block">
       <div class="input-wrapper">
         <label for="nameRegister" class="text-label label_star">Name</label>
-        <input type="text" id="nameRegister" class="text-input ">
+        <input type="text" name="nameRegister" id="nameRegister" class="text-input ">
       </div>
       <div class="input-wrapper">
         <label for="surnameRegister" class="text-label label_star">Surname</label>
-        <input type="text" id="surnameRegister" class="text-input ">
+        <input type="text" name="surnameRegister" id="surnameRegister" class="text-input ">
       </div>
       <div class="input-wrapper">
         <label for="passwordRegister" class="text-label label_star">Password</label>
-        <input type="password" id="passwordRegister" class="text-input ">
+        <input type="password" name="passwordRegister" id="passwordRegister" class="text-input ">
       </div>
       <div class="input-wrapper">
         <label for="passwordRepeatRegister" class="text-label label_star">Repeat password</label>
-        <input type="password" id="passwordRepeatRegister" class="text-input ">
+        <input type="password" name="passwordRepeatRegister" id="passwordRepeatRegister" class="text-input ">
       </div>
       <div class="input-wrapper">
         <label for="locationRegister" class="text-label label_star">Location</label>
-        <input type="text" id="locationRegister" class="text-input ">
+        <input type="text" name="locationRegister" id="locationRegister" class="text-input ">
       </div>
       <div class="input-wrapper">
         <label for="ageRegister" class="text-label label_star">Age</label>
-        <input type="text" id="ageRegister" class="text-input ">
+        <input type="text" name="ageRegister" id="ageRegister" class="text-input ">
       </div>
       
     </div>
