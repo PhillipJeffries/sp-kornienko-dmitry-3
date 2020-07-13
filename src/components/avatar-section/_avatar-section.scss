@@ -1,10 +1,13 @@
 .avatar-section{
   padding-bottom: 30px;
+  width: 100%;
   &__title-block{
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     padding: 40px 0;
+    flex-wrap: wrap;
   }
   &__name-title{
     max-width: 280px;
@@ -20,6 +23,28 @@
     margin: 0;
     padding-bottom: 9px;
     box-sizing: border-box;
+    @media screen and (max-width: 400px) {
+      max-width: 200px;
+    }
+  }
+  &__header-menu-button-wrapper{
+    margin-left: auto;
+    align-self: flex-start;
+    @media screen and (min-width: 401px){
+      display: none;
+    }
+  }
+  &__header-menu-button{
+    border: none;
+    width: 32px;
+    height: 20px;
+    background-color: initial;
+    
+    
+    box-sizing: border-box;
+    background-image: url(/../static/images/MenuButton.svg);
+    background-repeat: no-repeat;
+    background-position: center;
   }
   &__photo-wrapper{
     position: relative;
@@ -31,4 +56,56 @@
     position: absolute;
     width: 100%;
   }
+}
+
+
+.change-photo-menu__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.arrow-button{
+  width: 42px;
+  height: 42px;
+  background-color: initial;
+  border: 2.5px solid #070707;
+  border-radius: 21px;
+  box-sizing: border-box;
+}
+
+.avatar-button_left{
+  background-image: url(/../static/images/left.svg);
+  background-repeat: no-repeat;
+  background-position: 9px;
+}
+
+.avatar-button_right{
+  background-image: url(/../static/images/right.svg);
+  background-repeat: no-repeat;
+  background-position: 13px;
+}
+
+.photo-indicator-list{
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.photo-indicator-item{
+  padding: 0 5px;
+}
+
+.photo-indicator-button{
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #E5E5E5;
+}
+
+.photo-indicator-button_active{
+  background-color: #070707;
 }

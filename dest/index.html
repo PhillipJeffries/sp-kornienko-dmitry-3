@@ -1,8 +1,8 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link href="style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
@@ -15,62 +15,38 @@
 <body>
   <div class="container">
     <header class="header">
-  <a href="index.html" class="header__link header__link_active">Home</a>
-  <ul class="header__menu">
-    <li class="header__menu-item">
-      <a href="/pages/myBlog/index.html" class="header__link @@class2">My blog</a>
-    </li>
-    <li class="header__menu-item">
-      <a href="#" class="header__link @@class3 header__link_sign">Sign in</a>
-    </li>
-    <li class="header__menu-item">
-      <a href="#" class="header__link @@class4 header__link_register">Register</a>
-    </li>
-  </ul>
+  <div class="header__wrapper">
+    <a href="index.html" class="header__link header__link_active">Home</a>
+    <ul class="header__menu">
+      <li class="header__menu-item">
+        <a href="/pages/myBlog/index.html" class="header__link @@class2">My blog</a>
+      </li>
+      <li class="header__menu-item">
+        <a href="#" class="header__link @@class3 header__link_sign">Sign in</a>
+      </li>
+      <li class="header__menu-item">
+        <a href="#" class="header__link @@class4 header__link_register">Register</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header__modal">
+    <button class="header__modal-close">
+    </button>
+    <a href="index.html" class="header__link header__link_active header__modal-link header__link_active">Home</a>
+    <ul class="header__modal-menu">
+      <li class="header__modal-menu-item">
+        <a href="/pages/myBlog/index.html" class="header__link @@class2 header__modal-link @@class2">My blog</a>
+      </li>
+      <li class="header__modal-menu-item">
+        <a href="#" class="header__link @@class3 header__modal-link @@class3 header__link_sign">Sign in</a>
+      </li>
+      <li class="header__modal-menu-item">
+        <a href="#" class="header__link @@class4 header__modal-link @@class4 header__link_register">Register</a>
+      </li>
+    </ul>
+  </div>
 </header>
-    <form name="filterForm" class="filterForm">
-  <div class="filter-tags">
-    <!--<input type="checkbox" name="tags" value="1" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="2" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="3" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="4" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="5" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="6" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="7" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="8" class="filter-checkbox">-->
-  </div>
-  <div class="filter-views">
-    <input type="radio" name="filterViews" value="1" id="">
-    <input type="radio" name="filterViews" value="2" id="">
-    <input type="radio" name="filterViews" value="3" id="">
-  </div>
-  <div class="filter-comments">
-    <input type="checkbox" name="filterComments" value="1">
-    <input type="checkbox" name="filterComments" value="2">
-    <input type="checkbox" name="filterComments" value="3">
-  </div>
-  <div class="filter-how-show">
-    <input type="radio" name="howShow" value="1">
-    <input type="radio" name="howShow" value="2">
-  </div>
-  <div class="filter-sort">
-    <input type="radio" name="filterSort" value="1">
-    <input type="radio" name="filterSort" value="2">
-    <input type="radio" name="filterSort" value="3">
-  </div>
-  <button type="submit">fuckYou</button>
-</form>
-    <div class="pagination">
-  <a href="" class="pagination__link">
-    1
-  </a>
-  <a href="" class="pagination__link">
-    2
-  </a>
-  <a href="" class="pagination__link">
-    3
-  </a>
-</div>
+    
     <section class="avatar-section">
   <div class="avatar-section__title-block">
     <h1 class="avatar-section__name-title page-title">
@@ -80,42 +56,58 @@
       Future front-end developer
 31 years old, Tolyatti
     </p>
+    <div class="avatar-section__header-menu-button-wrapper">
+      <button class="avatar-section__header-menu-button">
+      </button>
+
+    </div>
+
   </div>
   <div class="avatar-section__photo-wrapper">
-    <picture class="avatar-section__photo">
-      <source srcset="">
-      <img src="/../static/images/avatar.jpg" alt="avatar">
-    </picture>
+    <div class="avatar-section__slider">
+      <div class="avatar-section__slide">
+        <picture class="avatar-section__photo">
+          <source srcset="">
+          <img src="/../static/images/avatar.jpg" alt="avatar">
+        </picture>
+      </div>
+      <div class="avatar-section__slide">
+        <picture class="avatar-section__photo">
+          <source srcset="">
+          <img src="/../static/images/avatar.jpg" alt="avatar">
+        </picture>
+      </div>
+    </div>
+    
   </div>
   <div class="change-photo-menu__wrapper">
-  <button class="arrow-button left-button">
-  </button>
-  <ul class="photo-indicator-list">
-    <li class="photo-indicator-item">
-      <button class="photo-indicator-button photo-indicator-button_active">
-      </button>
-    </li>
-    <li class="photo-indicator-item">
-      <button class="photo-indicator-button">
-      </button>
-    </li>
-    <li class="photo-indicator-item">
-      <button class="photo-indicator-button">
-      </button>
-    </li>
-    <li class="photo-indicator-item">
-      <button class="photo-indicator-button">
-      </button>
-    </li>
-  </ul>
-  <button class="arrow-button right-button">
-  </button>
-</div>
-
+    <button class="arrow-button avatar-button_left">
+    </button>
+    <ul class="photo-indicator-list">
+      <li class="photo-indicator-item">
+        <button class="photo-indicator-button photo-indicator-button_active">
+        </button>
+      </li>
+      <li class="photo-indicator-item">
+        <button class="photo-indicator-button">
+        </button>
+      </li>
+      <li class="photo-indicator-item">
+        <button class="photo-indicator-button">
+        </button>
+      </li>
+      <li class="photo-indicator-item">
+        <button class="photo-indicator-button">
+        </button>
+      </li>
+    </ul>
+    <button class="arrow-button avatar-button_right">
+    </button>
+  </div>
 </section>
   </div>
     <section class="about-me-section">
-  <div class="frame-container">
+  <div class="frame-container container">
     <h2 class="section-title">
       About me
     </h2>

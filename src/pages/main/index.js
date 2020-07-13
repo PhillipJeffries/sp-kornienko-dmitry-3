@@ -1,29 +1,4 @@
-/*
-let fuckYou = "Fuck You";
-let man = "and suck my dick";
-let space = " ";
-let fucker = {
-  name: "",
-  age: "",
-};
-alert(fuckYou + space + man);
-fucker.name = prompt("What is Your name, bitch?");
 
-fucker.age = prompt("How old are You, bitch&");
-console.log(fucker);
-*/
-
-
-
-/*let number = 0;
-
-number = prompt("write the number, bitch");
-for(let i=0; i<=number;i++){
-  if(i%4){
-    console.log(i)
-  }
-}
-*/
 
 /*let number = 0;
 
@@ -36,6 +11,48 @@ let growSoft = setInterval(function(){
 setTimeout(function(){clearInterval(growSoft)}, 9000)
 */
 
+//slider (trancition)
+
+
+let slidePosition = 0;
+const slidesToShow = 1;
+const slidesToScroll = 1;
+const avatarSliderWrapper = document.querySelector('.avatar-section__photo-wrapper');
+const avatarSlider = document.querySelector('.avatar-section__slider');
+// const slide = document.querySelector('.avatar-section__slide');
+const prevAvatar = document.querySelector('.avatar-button_left');
+const nextAvatar = document.querySelector('.avatar-button_right');
+const avatarSlides = document.querySelectorAll('.avatar-section__slide');
+const avatarSlidesCount = avatarSlides.length;
+const avatarSlideWidth = avatarSliderWrapper.clientWidth / slidesToShow;
+const avatarMovePosition = slidesToScroll * avatarSlideWidth;
+
+avatarSlides.forEach((slide) => {
+  slide.style.minWidth = `${avatarSlideWidth}px`;
+});
+
+nextAvatar.addEventListener('click', () => {
+  console.log('1')
+  const itemsLeft = avatarSlidesCount - (Math.abs(slidePosition) + slidesToShow * avatarSlideWidth) / avatarSlideWidth;
+
+  slidePosition -= itemsLeft >= slidesToScroll ? avatarMovePosition : itemsLeft * avatarSlideWidth;
+  setPosition();
+  checkBtns();
+
+});
+
+const setPosition = () => {
+  avatarSlider.style.transform = `translateX(${slidePosition}px)`;
+};
+
+const checkBtns = () => {
+  prevAvatar.disabled = slidePosition ===0;
+  nextAvatar.disabled = slidePosition <- -(avatarSlidesCount - slidesToShow) * avatarSlideWidth;
+};
+
+checkBtns();
+
+
 
 
 
@@ -47,36 +64,81 @@ setTimeout(function(){clearInterval(growSoft)}, 9000)
 
 const SERVER_URL = 'https://academy.directlinedev.com';
 
-function call(method, path, fn) {
+let tagsBox = document.querySelector('.filter-tags');
+
+let cardBox = document.querySelector('.card-box');
+
+
+
+//XMLHttpRequest --------------
+function call(method, path, fn, onerror) {
   let xhr = new XMLHttpRequest();
   xhr.open(method, SERVER_URL + path);
   xhr.send();
   xhr.onload = function () {
     fn(xhr);
   }
-}
+  xhr.onerror = function () {
+    if(onerror)
+      onerror(xhr);
+  }
+};
 
 function createTag(tag) {
   return `
-  <input type="checkbox" name="tags" value="1" class="filter-checkbox">
+  <div>
+  <input type="checkbox" id='${tag.id}' name="tags" value="" class="filter-checkbox">
+  <label for='${tag.id}' style='color: ${tag.color}'>${tag.name}</label>
+  </div>
   `
-}
+};
 
-let tagsBox = document.querySelector('.filter-tags');
 
-call('GET', '/api/tags', function(res) {
-  let response = JSON.parse(res.response);
-  if(response.success) {
-    const tags = response.data;
-    for(let i=0; i < tags.length; i++) {
-      let tagHtml = createTag(tags[i]);
-      tagsBox.insertAdjacentHTML('beforeend', tagHtml)
-    }
-    console.log(tags);
-  } else {
-      alert('fuckYou!');
-  }
-})
+/*<div class="blog-card">
+  <img src="${SERVER_URL}${card.desktopPhotoUrl}">
+  <p class="blog-card-text">${card.text}</p>
+  </div>*/
+
+
+  
+function createCard(card) {
+  return `
+  <div class="blog-card1">
+  <div class="blog-img-wrapper">
+    <img src="${SERVER_URL}${card.desktopPhotoUrl}">
+  </div>
+  <div class="blog-card-info-wrapper">
+    <div class="blog-card-tags">
+      <div class="blog-card-tag"></div>
+    </div>
+    <div class="blog-meta-wrapper">
+      <span class="blog-card-date">${card.date}</span>
+      <span class="blog-card-views">${card.views}</span>
+      <span class="blog-card-comments">12345</span>
+    </div>
+    <h4 class="blog-card-title">${card.title}</h4>
+    <p class="blog-card-text">${card.text}</p>
+    <a href="#" class="blog-card-link">Go to this post</a>
+  </div>
+</div>
+  `
+};
+
+
+
+//TAGS XMLHttpRequest 
+
+
+
+
+
+
+
+//CARDS (posts) XMLHttpRequest 
+
+
+
+
 
 
 
@@ -232,20 +294,7 @@ let filterForm = document.querySelector('.filterForm');
 
 
 
-//get values filter form---------------------
-filterForm.addEventListener('submit', function(event){
-  event.preventDefault();
-  console.log('filterSubmitPush', getValuesForm(event.target));
-  localStorage.setItem('filterForm', filterForm);
-  setValuesUrl(getValuesForm(event.target))
-})
 
-
-
-//set values filter form--------------
-setAllValuesForm(filterForm, localStorage.getItem('filterForm', filterForm))
-
-setAllValuesForm(filterForm, getValuesUrl());
 
 
 
@@ -291,7 +340,7 @@ signForm.addEventListener('submit', function(event){
   console.log(event);
 })
 
-signForm.addEventListener('submit', function (event){
+/*signForm.addEventListener('submit', function (event){
   event.preventDefault();
   const signValues = getValuesForm(event.target);
   if(!mailCheck(signValues.emailSign)){
@@ -302,7 +351,7 @@ signForm.addEventListener('submit', function (event){
   };
   console.log('signValues', signValues);
   console.log('target', event.target)
-})
+})*/
 
 
 
@@ -327,6 +376,26 @@ document.addEventListener('keydown', function (evt) {
 
  
 
+//registration send--------------
+
+/*functiom sendReq({url, method, body, headers}) {   //set standart values (method='GET', body={},headers={})
+
+}*/
+
+function sendReq({url, method='GET', body={}, headers={}}) {
+  const settings = {
+    method: method,  //method,
+    body: body,      //body,
+    headers: headers,//headers,
+  };
+
+  return fetch(SERVER_URL + url, settings)
+};
+
+
+
+
+
 
 
 //REGISTER-FORM-------------------
@@ -340,14 +409,28 @@ registerForm.addEventListener('submit', function (event){
   event.preventDefault();
   const registerValues = getValuesForm(event.target);
   if(!mailCheck(registerValues.emailRegister)){
-    alert('wtf!')
+    alert('email is invalid')
   }
   if(registerValues.passwordRegister.length <3 || registerValues.passwordRegister.length <20) {
-    alert('fuckYou')
+    alert('password is inalid')
   };
   console.log('registerValues', registerValues);
   console.log('target', event.target)
+  sendReq({
+    url: '/api/users', 
+    method: 'POST', 
+    body: JSON.stringify(registerValues),
+    headers: {
+      'content-type': 'aplication/json;charset=utf-8'
+    },
+  })
+  .then(function (res) {
+    console.log('res', res);
+  });
 })
+
+
+
 
 
 
@@ -368,7 +451,7 @@ const wrapper = document.querySelector('.portfolio-section__slider-wrapper'),
 slider.style.transition = 'margin-left .5s' ;
 
 let shearWidth = +getComputedStyle(wrapper).width.split('px')[0],
-    numberSlides = slider.childElementCount - 1, //slider.querySelectorAll('.portfolio-section__slide).length-1
+    numberSlides = slides.length - 1, //slider.querySelectorAll('.portfolio-section__slide).length-1
     activeSlide = 0,
     timerID,
     dots = [];

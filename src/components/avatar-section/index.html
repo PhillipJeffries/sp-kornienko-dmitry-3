@@ -7,12 +7,52 @@
       Future front-end developer
 31 years old, Tolyatti
     </p>
+    <div class="avatar-section__header-menu-button-wrapper">
+      <button class="avatar-section__header-menu-button">
+      </button>
+
+    </div>
+
   </div>
   <div class="avatar-section__photo-wrapper">
-    <picture class="avatar-section__photo">
-      <source srcset="">
-      <img src="/../static/images/avatar.jpg" alt="avatar">
-    </picture>
+    <div class="avatar-section__slider">
+      <div class="avatar-section__slide">
+        <picture class="avatar-section__photo">
+          <source srcset="">
+          <img src="/../static/images/avatar.jpg" alt="avatar">
+        </picture>
+      </div>
+      <div class="avatar-section__slide">
+        <picture class="avatar-section__photo">
+          <source srcset="">
+          <img src="/../static/images/avatar.jpg" alt="avatar">
+        </picture>
+      </div>
+    </div>
+    
   </div>
-  @@include('change-photo-menu/index.html')
+  <div class="change-photo-menu__wrapper">
+    <button class="arrow-button avatar-button_left">
+    </button>
+    <ul class="photo-indicator-list">
+      <li class="photo-indicator-item">
+        <button class="photo-indicator-button photo-indicator-button_active">
+        </button>
+      </li>
+      <li class="photo-indicator-item">
+        <button class="photo-indicator-button">
+        </button>
+      </li>
+      <li class="photo-indicator-item">
+        <button class="photo-indicator-button">
+        </button>
+      </li>
+      <li class="photo-indicator-item">
+        <button class="photo-indicator-button">
+        </button>
+      </li>
+    </ul>
+    <button class="arrow-button avatar-button_right">
+    </button>
+  </div>
 </section>

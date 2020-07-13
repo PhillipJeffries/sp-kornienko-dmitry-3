@@ -1,0 +1,9 @@
+
+.checkbox-svg_new > path{
+  opacity: 0;
+}
+
+
+.checkbox_hidden:checked + .checkbox-svg_new > path{
+  opacity: 100;
+}
