@@ -1,63 +1,112 @@
 <form name="filterForm" class="filterForm">
-  <div class="filter-tags">
-    <h6>Tags</h6>
-    @@include('checkbox_custom/index.html')
-    <!--<input type="checkbox" name="tags" value="1" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="2" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="3" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="4" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="5" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="6" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="7" class="filter-checkbox">
-    <input type="checkbox" name="tags" value="8" class="filter-checkbox">-->
+  <div class="filter-form-wrapper">
+    <div class="filter-tags">
+      <h6 class="filter-header">Tags</h6>
+      <div class="filter-tags-wrapper">
+      </div>
+      
+    </div>
+    <div class="filter-views">
+      <h6 class="filter-header">Views</h6>
+      @@include('radio_custom/index.html',{
+        "class":"radio_filter",
+        "id": "a",
+        "name": "views",
+        "label": "100-500"
+      })
+      @@include('radio_custom/index.html',{
+        "class":"radio_filter",
+        "id": "b",
+        "name": "views",
+        "label": "500-1000"
+      })
+      @@include('radio_custom/index.html',{
+        "class":"radio_filter",
+        "id": "c",
+        "name": "views",
+        "label": "1000-2000"
+      })
+    </div>
+    <div class="filter-comments">
+      <h6 class="filter-header">Comments</h6>
+      @@include('checkbox_custom/index.html',{
+        "id": "h",
+        "name": "comments",
+        "color": "#070707",
+        "class": "checkbox_filter",
+        "label": "0"
+      })
+      @@include('checkbox_custom/index.html',{
+        "id": "g",
+        "name": "comments",
+        "color": "#070707",
+        "class": "checkbox_filter",
+        "label": "0-1"
+      })
+      @@include('checkbox_custom/index.html',{
+        "id": "l",
+        "name": "comments",
+        "color": "#070707",
+        "class": "checkbox_filter",
+        "label": "1-50"
+      })
+      
+    </div>
+    <div class="filter-how-show">
+      <h6 class="filter-header">How show?</h6>
+      @@include('radio_custom/index.html',{
+        "class":"radio_filter",
+        "id": "d",
+        "name": "howShow",
+        "label": "show 5"
+      })
+      @@include('radio_custom/index.html',{
+        "class":"radio_filter",
+        "id": "e",
+        "name": "howShow",
+        "label": "show 10"
+      })
+    </div>
+    <div class="filter-sort">
+      <h6 class="filter-header">Sort by</h6>
+      @@include('radio_custom/index.html',{
+        "class":"radio_filter",
+        "id": "f",
+        "name": "sortBy",
+        "label": "date"
+      })
+      @@include('radio_custom/index.html',{
+        "class":"radio_filter",
+        "id": "z",
+        "name": "sortBy",
+        "label": "title"
+      })
+      @@include('radio_custom/index.html',{
+        "class":"radio_filter",
+        "id": "y",
+        "name": "sortBy",
+        "label": "views"
+      })
+    </div>
+    <div class="submit-block">
+      @@include('button_white/index.html',{
+        "type":"submit",
+        "text":"Reset"
+      })
+    </div>
   </div>
-  <div class="filter-views">
-    <h6>Views</h6>
-    <input type="radio" name="filterViews" value="1" id="">
-    <input type="radio" name="filterViews" value="2" id="">
-    <input type="radio" name="filterViews" value="3" id="">
-  </div>
-  <div class="filter-comments">
-    <h6>Comments</h6>
-    <input type="checkbox" name="filterComments" value="1">
-    <input type="checkbox" name="filterComments" value="2">
-    <input type="checkbox" name="filterComments" value="3">
-  </div>
-  <div class="filter-how-show">
-    <h6>How show?</h6>
-    <input type="radio" name="howShow" value="1">
-    <input type="radio" name="howShow" value="2">
-  </div>
-  <div class="filter-sort">
-    <h6>Sort by</h6>
-    <input type="radio" name="filterSort" value="1">
-    <input type="radio" name="filterSort" value="2">
-    <input type="radio" name="filterSort" value="3">
-  </div>
-  <div class="submit-block">
-    <button type="submit">fuckYou</button>
+  <div class="filter-search-block">
+    <input type="text" class="text-input text-input_filter">
+    <div class="submit-block_search">
+      @@include('button_white/index.html',{
+        "type":"submit",
+        "text":"Search"
+      })
+
+    </div>
   </div>
   
 </form>
 <div class="card-box">
 </div>
-    <div class="blog-card1">
-      <div class="blog-img-wrapper">
-        <img src="/../static/images/avatar.jpg">
-      </div>
-      <div class="blog-card-info-wrapper">
-        <div class="blog-card-tags">
-          <div class="blog-card-tag"></div>
-        </div>
-        <div class="blog-meta-wrapper">
-          <span class="blog-card-date">123456</span>
-          <span class="blog-card-views">123456</span>
-          <span class="blog-card-comments">12345</span>
-        </div>
-        <h4 class="blog-card-title">title</h4>
-        <p class="blog-card-text">Duis sit odio dui pretium suspendisse malesuada sit leo in. Massa nec eget etiam tellus ac. Sodales nibh pellentesque donec eu ultrices tortor condimentum massa.</p>
-        <a href="#" class="blog-card-link">Go to this post</a>
-      </div>
-    </div>
-    @@include('checkbox_custom_svg/index.html')
     

@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Gilroy";
+  src: url("../static/fonts/Gilroy-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 
 body{
@@ -36,6 +43,12 @@ body{
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 10%;
+}
+
+.title-wrapper{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -147,7 +160,9 @@ body{
 @import "./button_white/button_white";
 @import "./button_close/button_close";
 @import "./checkbox_custom/checkbox_custom";
-@import "./checkbox_custom_svg/checkbox_custom_svg";
+@import "./color-checkbox_custom/color-checkbox_custom";
+
+@import "./radio_custom/radio_custom";
 
 @import "./link_radial-border/link_radial";
 //modals

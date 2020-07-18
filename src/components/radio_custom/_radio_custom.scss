@@ -1,0 +1,25 @@
+.radio_old{
+  position: absolute;
+  display: none;
+}
+
+.radio-custom-wrapper{
+  margin-bottom: 10px;
+}
+
+.radio_custom{
+  display: flex;
+  align-items: center;
+}
+
+.radio_point{
+  opacity: 0;
+}
+
+.radio_old:checked + label .radio_point{
+  opacity: 1;
+}
+
+.radio-text{
+  padding-left: 10px;
+}

@@ -12,7 +12,7 @@ modal.classList.add('hidden')
 
 const SERVER_URL = 'https://academy.directlinedev.com';
 
-let tagsBox = document.querySelector('.filter-tags');
+let tagsBox = document.querySelector('.filter-tags-wrapper');
 
 let cardBox = document.querySelector('.card-box');
 
@@ -20,10 +20,10 @@ let cardBox = document.querySelector('.card-box');
 
 //XMLHttpRequest --------------
 function call(method, path, fn, onerror) {
-  let xhr = new XMLHttpRequest();
-  xhr.open(method, SERVER_URL + path);
-  xhr.send();
-  xhr.onload = function () {
+  let xhr = new XMLHttpRequest();  //creating of server request
+  xhr.open(method, SERVER_URL + path);  //opern connection with server
+  xhr.send();                            // sending of request
+  xhr.onload = function () {             //xhr start in function
     fn(xhr);
   }
   xhr.onerror = function () {
@@ -32,6 +32,8 @@ function call(method, path, fn, onerror) {
   }
 };
 
+
+/*
 function createTag(tag) {
   return `
   <div>
@@ -40,6 +42,27 @@ function createTag(tag) {
   </div>
   `
 };
+*/
+
+
+function createTag(tag) {
+  return `
+  <div class="checkbox-wrapper filter-form-checkbox checkbox_filter tag-checkbox">
+    <input type="checkbox" id='${tag.id}' class="checkbox-wrapper__oldstyle" name="tags">
+
+    <label for='${tag.id}' class="checkbox-wrapper__label @@class">
+      <svg class="checkbox-wrapper__svg" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1.25" y="1.25" width="22.5" height="22.5" rx="3.75" stroke="${tag.color}" stroke-width="2.5" class="checkbox-wrapper__svg-square"/>
+          <path d="M7 11.75L10.913 17.77C11.2013 18.2135 11.8584 18.1893 12.1133 17.7259L18.425 6.25" stroke="${tag.color}"
+                stroke-width="2.5" stroke-linecap="round" class="checkbox-wrapper__svg-arrow"/>
+      </svg>
+      
+    </label>
+  </div>
+  `
+};
+
+
 
 
 /*<div class="blog-card">
@@ -60,7 +83,7 @@ function createCard(card) {
       <div class="blog-card-tag"></div>
     </div>
     <div class="blog-meta-wrapper">
-      <span class="blog-card-date">${card.date}</span>
+      <span class="blog-card-date">${card.date.split('-')}</span>
       <span class="blog-card-views">${card.views}</span>
       <span class="blog-card-comments">12345</span>
     </div>

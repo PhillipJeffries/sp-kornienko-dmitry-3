@@ -29,19 +29,19 @@
       </li>
     </ul>
   </div>
-  <div class="header__modal">
+  <div class="header__modal hidden">
     <button class="header__modal-close">
     </button>
-    <a href="index.html" class="header__link header__link_active header__modal-link header__link_active">Home</a>
+    <a href="index.html" class="header__link header__modal-link header__link_active">Home</a>
     <ul class="header__modal-menu">
       <li class="header__modal-menu-item">
-        <a href="/pages/myBlog/index.html" class="header__link @@class2 header__modal-link @@class2">My blog</a>
+        <a href="/pages/myBlog/index.html" class="header__link header__modal-link @@class2">My blog</a>
       </li>
       <li class="header__modal-menu-item">
-        <a href="#" class="header__link @@class3 header__modal-link @@class3 header__link_sign">Sign in</a>
+        <a href="#" class="header__link header__modal-link @@class3 header__link_sign">Sign in</a>
       </li>
       <li class="header__modal-menu-item">
-        <a href="#" class="header__link @@class4 header__modal-link @@class4 header__link_register">Register</a>
+        <a href="#" class="header__link header__modal-link @@class4 header__link_register">Register</a>
       </li>
     </ul>
   </div>
@@ -385,12 +385,27 @@
       </div>
       
     </div>
-    <div class="checkbox-wrapper">
+    <!--
+  <div class="checkbox-wrapper">
   <input type="checkbox" class="checkbox-wrapper__oldstyle" name="@@name" id="@@id"> 
   <span class="checkbox-wrapper__newstyle @@class"></span>
 
   <label for="@@id" class="checkbox-wrapper__label @@class">
     Clicking on the button, you consent to the processing of your personal data. 
+  </label>
+</div>
+-->
+
+<div class="checkbox-wrapper @@class">
+  <input type="checkbox" class="checkbox-wrapper__oldstyle" name="@@name" id="@@id">
+
+  <label for="@@id" class="checkbox-wrapper__label @@class">
+      <svg class="checkbox-wrapper__svg @@class" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1.25" y="1.25" width="22.5" height="22.5" rx="3.75" stroke="@@color" stroke-width="2.5" class="checkbox-wrapper__svg-square"/>
+          <path d="M7 11.75L10.913 17.77C11.2013 18.2135 11.8584 18.1893 12.1133 17.7259L18.425 6.25" stroke="@@color"
+                stroke-width="2.5" stroke-linecap="round" class="checkbox-wrapper__svg-arrow"/>
+      </svg>
+      <span class="checkbox-wrapper__label-text">Clicking on the button, you consent to the processing of your personal data.</span>
   </label>
 </div>
     <button type="@@type" class="button_white form-button">
@@ -426,12 +441,27 @@
       
     <label for="sendMessageText" class="text-label">What do you want to discuss with me?</label>
     <textarea class="text-input" name="" id="sendMessageText" cols="30" rows="5"></textarea>
-    <div class="checkbox-wrapper">
+    <!--
+  <div class="checkbox-wrapper">
   <input type="checkbox" class="checkbox-wrapper__oldstyle" name="@@name" id="@@id"> 
   <span class="checkbox-wrapper__newstyle @@class"></span>
 
   <label for="@@id" class="checkbox-wrapper__label @@class">
     Clicking on the button, you consent to the processing of your personal data. 
+  </label>
+</div>
+-->
+
+<div class="checkbox-wrapper @@class">
+  <input type="checkbox" class="checkbox-wrapper__oldstyle" name="@@name" id="@@id">
+
+  <label for="@@id" class="checkbox-wrapper__label @@class">
+      <svg class="checkbox-wrapper__svg @@class" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1.25" y="1.25" width="22.5" height="22.5" rx="3.75" stroke="@@color" stroke-width="2.5" class="checkbox-wrapper__svg-square"/>
+          <path d="M7 11.75L10.913 17.77C11.2013 18.2135 11.8584 18.1893 12.1133 17.7259L18.425 6.25" stroke="@@color"
+                stroke-width="2.5" stroke-linecap="round" class="checkbox-wrapper__svg-arrow"/>
+      </svg>
+      <span class="checkbox-wrapper__label-text">Clicking on the button, you consent to the processing of your personal data.</span>
   </label>
 </div>
     <button type="@@type" class="button_white form-button">

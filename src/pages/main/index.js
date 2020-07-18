@@ -143,7 +143,7 @@ function createCard(card) {
 
 
 
-//show/hide  function------------
+//show/hide modal function------------
 
 function showModal(modal){
   modal.classList.remove('hidden')
@@ -152,6 +152,33 @@ function showModal(modal){
 function hideModal(modal){
 modal.classList.add('hidden')
 } ;
+
+
+
+//header-menu show/hide
+
+let headerModal = document.querySelector('.header__modal'),
+    headerModalShowButton = document.querySelector('.avatar-section__header-menu-button'),
+    headerModalCloseButton = document.querySelector('.header__modal-close');
+
+
+
+headerModalShowButton.addEventListener('click', function(event){
+  event.preventDefault();
+    showModal(headerModal)
+  
+});
+
+
+headerModalCloseButton.addEventListener('click', function(event){
+  event.preventDefault(); 
+  hideModal(headerModal)
+});
+
+document.addEventListener('keydown', function (evt) {
+  if(evt.keyCode === 27) {
+      hideModal(headerModal)}
+}); 
 
 
 //get form values function---------------------

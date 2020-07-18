@@ -1,13 +1,51 @@
 .filterForm{
+  margin: 40px 0 20px 0;
+  
+}
+
+.filter-header{
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 0 10px 0;;
+}
+
+.filter-form-wrapper{
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.filterForm > div{
+.filter-form-wrapper > div{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-grow: 1;
+}
+
+.filter-search-block{
+  display: flex;
+}
+
+.text-input_filter{
+  margin: 0;
+  flex-grow: 1;
+}
+
+.submit-block_search{
+  flex-grow: 2;
+}
+
+.filter-tags{
+  
+}
+
+.filter-tags-wrapper{
+  max-width: 120px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -17,8 +55,13 @@
   justify-content: center;
 }
 
-.filter-checkbox{
-  //display: block;
+.checkbox-wrapper{
+  margin-bottom: 10px;
+
+}
+
+.radio_filter{
+  //margin-bottom: 10px;
 }
 
 .card-box{
