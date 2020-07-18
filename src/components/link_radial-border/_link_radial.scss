@@ -10,4 +10,11 @@
   border-radius: 30px;
   box-sizing: border-box;
   text-decoration: none;
+  transition-property: color, background-color;
+  transition-duration: .2s;
+}
+
+.link_radial:hover, .link_radial:focus{
+  color: white;
+  background-color: black;
 }

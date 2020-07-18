@@ -6,6 +6,17 @@
   text-align: center;
   color: #FFFFFF;
   background-color: #070707;
-  border: none;
+  border: solid black 2px;
   border-radius: 30px;
+  box-sizing: border-box;
+  transition-property: color, background-color;
+  transition-duration: .2s;
+}
+
+.button_black:hover, .button_black:focus{
+  color: black;
+  background-color: white;
+  border: solid black 2px;
+  cursor: pointer;
+  box-sizing: border-box;
 }

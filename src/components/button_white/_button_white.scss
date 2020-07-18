@@ -8,4 +8,14 @@
   background-color: white;
   border: 3px solid #070707;
   border-radius: 30px;
+  transition-property: color, background-color;
+  transition-duration: .2s;
+}
+
+.button_white:hover, .button_white:focus{
+  color: white;
+  background-color: black;
+  border: solid black 3px;
+  cursor: pointer;
+  box-sizing: border-box;
 }
